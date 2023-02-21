@@ -1,7 +1,11 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,21 +27,14 @@ namespace _1C_Json_Download
 
             var json = client.DownloadString(url);
 
-            JObject obj = JObject.Parse(json);
+            json = json.Remove(1, 96);
 
-            //var SelectedFields = from field in json
-            //                     where field.Equals("Code") || 
-            //                     field.Equals("Description") || 
-            //                     field.Equals("Автор")
-            //                     select field;
+            //Проблема с десериализацией вот здесь 
 
-            Console.WriteLine(json);
+            var result = JsonConvert.DeserializeObject<List<Book>>(json);
 
+            Console.WriteLine(result);
 
-
-
-
-            //Console.WriteLine(client.DownloadString(url));
             Console.ReadLine();
         }
     }
