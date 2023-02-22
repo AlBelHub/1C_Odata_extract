@@ -37,14 +37,14 @@ namespace _1C_Json_Download
             {
                 Console.WriteLine
                     (
-                    books[i].Code + 
+                    "\n Code: " + books[i].Code + 
                     "\n Author: " + books[i].Author + 
                     "\n Description: " + books[i].Description +
                     "\n YearOfProd: " + books[i].YearOfProd +
                     "\n AuthorZnak: " + books[i].AuthorZnak +
                     "\n Izdatel: " + books[i].Izdatel +
                     "\n IzdatelTown: " + books[i].Izdatel_Town +
-                    "\n DateOfLastChanges: " + books[i].DateOfLastChanges
+                    "\n Data sozdaniya: " + books[i].DateOfCreate
                     );
             }
 

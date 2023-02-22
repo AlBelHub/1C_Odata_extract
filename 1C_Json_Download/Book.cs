@@ -21,17 +21,11 @@ namespace _1C_Json_Download
         public string AuthorZnak { get; set; }
         [JsonProperty("ГодИздания")]
         public string YearOfProd { get; set; }
-        [JsonProperty("ДатаПоследнихИзменений")]
-        public string DateOfLastChanges { get; set; }
+        [JsonProperty("ДатаСозданияЗаписи")]
+        public string DateOfCreate { get; set; }
         [JsonProperty("ИздательствоПредставление")]
         public string Izdatel { get; set; }
         [JsonProperty("МестоИзданияПредставление")]
         public string Izdatel_Town { get; set; }
-    }
-
-    [JsonArray]
-    public class ListOfBooks
-    {
-        public List<Book> books { get; set; }
     }
 }
