@@ -15,7 +15,7 @@ namespace _1C_Json_Download
         public string Code { get; set; }
         [JsonProperty("Description")]
         public string Description { get; set; }
-        [JsonProperty("Author")]
+        [JsonProperty("Автор")]
         public string Author { get; set; }
         [JsonProperty("АвторскийЗнак")]
         public string AuthorZnak { get; set; }
